@@ -74,12 +74,15 @@ git log --since=<num>.days.ago          # Show commits since the specified numbe
 
 ### Modifying Files
 ```bash
-# Resetting files
+# Resetting files - works only on local files
 git reset <commit_id>                               # Move HEAD to the specified commit without changing files
 git reset --hard <commit_id>                        # Move HEAD and reset all local files to the specified commit
 git reset --soft                                    # Move HEAD without changing local files
 git reset <file_name>                               # Remove a file from staging
 git reset <file_name> + git checkout <file_name>    # Recover file from the beyond
+
+# Reverting file - works on remote
+git revert <branch_name>                            # Creates new commit that removes previous commit
 git rm <file_name>                                  # Delete a file from the project
 git rm -r --cached <folder_name>                    # Remove a folder without deleting it locally
 git mv <original_file_name> <new_file_name>         # Rename a file and stage the change
