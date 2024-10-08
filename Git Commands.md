@@ -9,9 +9,9 @@ git clone --bare <file_to_create>       # Create a bare git folder
 ```bash
 # Check project status
 git status                               # Current status of the project
-git ls-tree HEAD                         # View all files in the latest version
-git ls-tree <commit_id>                  # Files committed in a specific commit
-git ls-files --stage -- <file_name>      # Files in the staging area
+git ls-tree HEAD                         # List all files in the latest version
+git ls-tree <commit_id>                  # List files committed in a specific commit
+git ls-files --stage -- <file_name>      # List files in the staging area
 git ls-files --others                    # List untracked files
 git ls-files --exclude-standard          # List tracked files, excluding ignored ones
 
@@ -221,7 +221,7 @@ ls                       # Show contents of the directory
 ls -a                    # Show hidden files
 dir                      # Show contents in Windows
 touch <file_name>        # Create new file in directory
-ech 'text' > <file_name> # Write text in specified file
+ech '<phrase>' > <file_name> # Write text in specified file
 cat .gitconfig           # See git configurations
 vi <file_name>           # Opens file for editing (text editor, more advanced)
 nano <file_name>         # Opens file for editing or creates new one if it doesn't exist
